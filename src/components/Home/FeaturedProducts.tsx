@@ -5,10 +5,23 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { products } from '@/data/staticData';
+import { useCart } from '@/contexts/CartContext';
+import { useToast } from '@/hooks/use-toast';
 
 const FeaturedProducts = () => {
+  const { addItem } = useCart();
+  const { toast } = useToast();
+  
   // Get first 6 products as featured
   const featuredProducts = products.slice(0, 6);
+
+  const handleAddToCart = (product: typeof products[0]) => {
+    addItem(product);
+    toast({
+      title: "Added to Cart",
+      description: `${product.name} has been added to your cart.`,
+    });
+  };
 
   return (
     <section className="py-16 px-4">
@@ -118,6 +131,7 @@ const FeaturedProducts = () => {
                       variant="default"
                       disabled={!product.inStock}
                       className="flex-1"
+                      onClick={() => handleAddToCart(product)}
                     >
                       <ShoppingCart className="h-4 w-4 mr-1" />
                       Add to Cart

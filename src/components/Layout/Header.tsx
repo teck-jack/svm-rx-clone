@@ -10,10 +10,12 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { useCart } from '@/contexts/CartContext';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const { state } = useCart();
 
   const navigationItems = [
     { name: 'Medicines', href: '/medicines' },
@@ -102,11 +104,15 @@ const Header = () => {
             </DropdownMenu>
 
             {/* Cart */}
-            <Button variant="ghost" size="sm" className="relative">
-              <ShoppingCart className="h-5 w-5" />
-              <span className="absolute -top-1 -right-1 bg-accent text-accent-foreground text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                0
-              </span>
+            <Button variant="ghost" size="sm" className="relative" asChild>
+              <Link to="/cart">
+                <ShoppingCart className="h-5 w-5" />
+                {state.itemCount > 0 && (
+                  <span className="absolute -top-1 -right-1 bg-accent text-accent-foreground text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                    {state.itemCount}
+                  </span>
+                )}
+              </Link>
             </Button>
 
             {/* Mobile Menu Toggle */}
