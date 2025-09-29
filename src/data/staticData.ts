@@ -37,42 +37,42 @@ export const categories: Category[] = [
   {
     id: "medicines",
     name: "Medicines",
-    image: "/api/placeholder/200/200",
+    image: "/Prescription-Medicines.jpg",
     description: "Prescription and OTC medicines",
     productCount: 1240
   },
   {
     id: "wellness",
     name: "Wellness",
-    image: "/api/placeholder/200/200", 
+    image: "https://picsum.photos/seed/supplements/200/200", // Image of vitamin bottles/supplements
     description: "Vitamins, supplements & nutrition",
     productCount: 450
   },
   {
     id: "personal-care",
     name: "Personal Care",
-    image: "/api/placeholder/200/200",
+    image: "https://picsum.photos/seed/skincare/200/200", // Image of personal care/skincare products
     description: "Skincare, haircare & hygiene products",
     productCount: 680
   },
   {
     id: "baby-care",
     name: "Baby Care",
-    image: "/api/placeholder/200/200",
+    image: "./babycare.webp", // Image of baby products
     description: "Baby food, diapers & care products",
     productCount: 320
   },
   {
     id: "ayurvedic",
     name: "Ayurvedic",
-    image: "/api/placeholder/200/200",
+    image: "https://picsum.photos/seed/ayurveda/200/200", // Image of herbal/ayurvedic products
     description: "Traditional herbal medicines",
     productCount: 280
   },
   {
     id: "fitness",
     name: "Fitness & Nutrition",
-    image: "/api/placeholder/200/200",
+    image: "https://picsum.photos/seed/protein/200/200", // Image of protein powder/shaker
     description: "Protein, supplements & fitness gear",
     productCount: 150
   }
@@ -82,37 +82,37 @@ export const healthConcerns: HealthConcern[] = [
   {
     id: "diabetes",
     name: "Diabetes Care",
-    image: "/api/placeholder/150/150",
+    image: "https://picsum.photos/seed/glucometer/150/150", // Image of a glucometer
     description: "Blood sugar monitoring & management"
   },
   {
     id: "heart-care",
     name: "Heart Care",
-    image: "/api/placeholder/150/150", 
+    image: "https://picsum.photos/seed/heartpills/150/150", // Image of heart-related pills/blister pack
     description: "Cardiovascular health products"
   },
   {
     id: "digestive",
     name: "Digestive Care",
-    image: "/api/placeholder/150/150",
+    image: "https://picsum.photos/seed/antacid/150/150", // Image of antacid or probiotic product
     description: "Stomach & digestive health"
   },
   {
     id: "immunity",
     name: "Immunity Boosters",
-    image: "/api/placeholder/150/150",
+    image: "https://picsum.photos/seed/vitamin-c/150/150", // Image of vitamin C or immunity product
     description: "Immunity & vitamin supplements"
   },
   {
     id: "pain-relief",
     name: "Pain Relief",
-    image: "/api/placeholder/150/150",
+    image: "https://picsum.photos/seed/ointment/150/150", // Image of a pain relief tube or balm
     description: "Pain management & relief"
   },
   {
     id: "respiratory",
     name: "Respiratory Care",
-    image: "/api/placeholder/150/150",
+    image: "https://picsum.photos/seed/coughsyrup/150/150", // Image of a cough syrup bottle
     description: "Cough, cold & breathing support"
   }
 ];
@@ -126,7 +126,7 @@ export const products: Product[] = [
     originalPrice: 28.00,
     rating: 4.5,
     reviews: 1240,
-    image: "/api/placeholder/300/300",
+    image: "https://picsum.photos/seed/paracetamol-blister/300/300", // Image of a paracetamol blister pack
     category: "medicines",
     description: "Fast-acting pain relief and fever reducer",
     inStock: true,
@@ -136,14 +136,14 @@ export const products: Product[] = [
     dosage: "1-2 tablets every 4-6 hours as needed"
   },
   {
-    id: "2", 
+    id: "2",
     name: "Vitamin D3 60000 IU",
     brand: "Calcirol",
     price: 85.00,
     originalPrice: 95.00,
     rating: 4.7,
     reviews: 890,
-    image: "/api/placeholder/300/300",
+    image: "https://picsum.photos/seed/vitamin-d-capsule/300/300", // Image of a Vitamin D capsule bottle
     category: "wellness",
     description: "High-potency vitamin D3 supplement for bone health",
     inStock: true,
@@ -160,8 +160,8 @@ export const products: Product[] = [
     originalPrice: 350.00,
     rating: 4.6,
     reviews: 2150,
-    image: "/api/placeholder/300/300",
-    category: "personal-care", 
+    image: "https://picsum.photos/seed/cetaphil-cleanser/300/300", // Image of a gentle cleanser bottle
+    category: "personal-care",
     description: "Gentle daily facial cleanser for all skin types",
     inStock: true,
     prescription: false,
@@ -176,7 +176,7 @@ export const products: Product[] = [
     originalPrice: 20.00,
     rating: 4.4,
     reviews: 560,
-    image: "/api/placeholder/300/300",
+    image: "https://picsum.photos/seed/crocin-box/300/300", // Image of a Crocin box
     category: "medicines",
     description: "Advanced paracetamol formula for faster relief",
     inStock: true,
@@ -193,7 +193,7 @@ export const products: Product[] = [
     originalPrice: 2299.00,
     rating: 4.3,
     reviews: 780,
-    image: "/api/placeholder/300/300",
+    image: "https://picsum.photos/seed/whey-protein-jar/300/300", // Image of a protein powder jar
     category: "fitness",
     description: "Premium whey protein for muscle building",
     inStock: true,
@@ -209,7 +209,7 @@ export const products: Product[] = [
     originalPrice: 195.00,
     rating: 4.5,
     reviews: 1340,
-    image: "/api/placeholder/300/300",
+    image: "https://picsum.photos/seed/baby-cereal-box/300/300", // Image of a baby cereal box
     category: "baby-care",
     description: "Nutritious baby cereal for 6+ months",
     inStock: true,
@@ -224,21 +224,21 @@ export const offers = [
     id: "1",
     title: "15% off on First Order",
     subtitle: "Use code: WELCOME15",
-    image: "/api/placeholder/400/200",
+    image: "https://picsum.photos/seed/offer-discount/400/200", // General offer banner
     validUntil: "31st Dec 2024"
   },
   {
-    id: "2", 
+    id: "2",
     title: "Free Delivery above ₹499",
     subtitle: "No delivery charges on orders above ₹499",
-    image: "/api/placeholder/400/200",
+    image: "https://picsum.photos/seed/offer-delivery/400/200", // Delivery offer banner
     validUntil: "Ongoing"
   },
   {
     id: "3",
     title: "Buy 2 Get 1 Free",
     subtitle: "On selected wellness products",
-    image: "/api/placeholder/400/200",
+    image: "https://picsum.photos/seed/offer-bogo/400/200", // BOGO offer banner
     validUntil: "15th Jan 2025"
   }
 ];
